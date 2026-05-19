@@ -32,6 +32,12 @@ function Wishlist() {
       <div style={styles.container}>
         <h1>Your Wishlist</h1>
 
+        {listings.length === 0 ? (
+          <div style={styles.empty}>
+            <h2>No wishlist items yet</h2>
+            <p>Save beautiful places here.</p>
+          </div>
+        ) : (
         <div style={styles.grid}>
           {listings.map(listing => (
             <ListingCard
@@ -49,6 +55,11 @@ function Wishlist() {
 const styles = {
   container: {
     padding: "30px"
+  },
+
+  empty: {
+    textAlign: "center",
+    padding: "120px 20px"
   },
 
   grid: {

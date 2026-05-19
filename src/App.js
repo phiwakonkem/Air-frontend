@@ -16,67 +16,82 @@ import ErrorBoundary from "./components/ErrorBoundary";
 
 function App() {
   return (
-    <ErrorBoundary>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/success" element={<Success />} />
-        <Route path="/cancel" element={<h1>Payment Cancelled</h1>} />
-        <Route path="/register" element={<Register />} />
+    <BrowserRouter>
+      <ErrorBoundary>
+        <Routes>
 
-        <Route
-          path="/reservations/:id"
-          element={
-            <ProtectedRoute>
-              <Reservations />
-            </ProtectedRoute>
-          }
+          <Route path="/" element={<Home />} />
+
+          <Route path="/login" element={<Login />} />
+
+          <Route path="/register" element={<Register />} />
+
+          <Route path="/success" element={<Success />} />
+
+          <Route
+            path="/cancel"
+            element={<h1>Payment Cancelled</h1>}
+          />
+
+          <Route
+            path="/reservations/:id"
+            element={
+              <ProtectedRoute>
+                <Reservations />
+              </ProtectedRoute>
+            }
+          />
+
+          <Route
+            path="/host"
+            element={
+              <ProtectedRoute>
+                <HostDashboard />
+              </ProtectedRoute>
+            }
+          />
+
+          <Route
+            path="/my-reservations"
+            element={
+              <ProtectedRoute>
+                <MyReservations />
+              </ProtectedRoute>
+            }
+          />
+
+          <Route
+            path="/wishlist"
+            element={
+              <ProtectedRoute>
+                <Wishlist />
+              </ProtectedRoute>
+            }
+          />
+
+          <Route
+            path="/admin"
+            element={
+              <ProtectedRoute role="admin">
+                <Admin />
+              </ProtectedRoute>
+            }
+          />
+
+          <Route
+            path="/listing/:id"
+            element={<ListingDetails />}
+          />
+
+        </Routes>
+
+        <ToastContainer
+          position="top-right"
+          autoClose={2000}
         />
 
-        <Route
-          path="/host"
-          element={
-            <ProtectedRoute>
-              <HostDashboard />
-            </ProtectedRoute>
-          }
-        />
-
-        <Route
-          path="/my-reservations"
-          element={
-            <ProtectedRoute>
-              <MyReservations />
-            </ProtectedRoute>
-          }
-        />
-
-        <Route
-          path="/admin"
-          element={
-            <ProtectedRoute role="admin">
-              <Admin />
-            </ProtectedRoute>
-          }
-        />
-
-        <Route
-          path="/wishlist"
-          element={
-            <ProtectedRoute>
-              <Wishlist />
-            </ProtectedRoute>
-          }
-        />
-
-        <Route
-          path="/listing/:id"
-          element={<ListingDetails />}
-        />
-         
-      </Routes>
-    </ErrorBoundary>  
-    <ToastContainer position="top-right" autoClose={2000} />
+      </ErrorBoundary>
+    </BrowserRouter>
   );
 }
 

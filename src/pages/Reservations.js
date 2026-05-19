@@ -219,20 +219,24 @@ const styles = {
   },
 
   left: {
-    background: "#fff",
+    background: "rgba(255,255,255,0.15)",
+    backdropFilter: "blur(18px)",
+    WebkitBackdropFilter: "blur(18px)",
+    border: "1px solid rgba(255,255,255,0.2)",
     padding: "30px",
     borderRadius: "24px",
-    boxShadow:
-      "0 8px 30px rgba(0,0,0,0.08)"
+    boxShadow: "0 8px 32px rgba(31,38,135,0.2)"
   },
 
   right: {
-    background: "#fff",
+    background: "rgba(255,255,255,0.15)",
+    backdropFilter: "blur(18px)",
+    WebkitBackdropFilter: "blur(18px)",
+    border: "1px solid rgba(255,255,255,0.2)",
     padding: "30px",
     borderRadius: "24px",
     height: "fit-content",
-    boxShadow:
-      "0 8px 30px rgba(0,0,0,0.08)"
+    boxShadow: "0 8px 32px rgba(31,38,135,0.2)"
   },
 
   image: {

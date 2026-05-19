@@ -14,11 +14,14 @@ const styles = {
     zIndex: 1000,
     background: "rgba(255,255,255,0.9)",
     backdropFilter: "blur(12px)",
-    borderBottom: "1px solid #eee"
+    WebkitBackdropFilter: "blur(18px)",
+    borderBottom: "1px solid rgba(255,255,255,0.2)",
+    boxShadow: "0 8px 32px rgba(0,0,0,0.08)"
   },
 
   logo: {
-    fontWeight: "bold"
+    fontSize: "28px",
+    color: "#ff385c"
   },
 
   dropdown: {
@@ -46,6 +49,14 @@ const styles = {
 
   profileContainer: {
     position: "relative"
+  },
+
+  logo: {
+    fontWeight: "800",
+    fontSize: "28px",
+    color: "#ff385c",
+    letterSpacing: "-1px",
+    cursor: "pointer"
   }
 };
 
@@ -55,7 +66,7 @@ function Navbar() {
 
   return (
     <nav style={styles.nav}>
-      <h2 style={styles.logo}>StayEasy</h2>
+      <Link to="/"><h2 style={styles.logo}>StayEasy</h2></Link>
 
       <div style={{ position: "relative" }}>
         {user ? (

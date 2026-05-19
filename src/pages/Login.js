@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import api from "../utils/api";
 import { Link } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
+import { toast } from "react-toastify";
 
 import {
   toast
@@ -34,7 +35,7 @@ function Login() {
 
       login(res.data.user, res.data.token);
 
-      toast.success("Login successful!");
+      toast.success("Registration successful!");
 
       window.location.href = "/";
     } catch (err) {
