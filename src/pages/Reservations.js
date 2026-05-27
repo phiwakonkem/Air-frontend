@@ -4,7 +4,6 @@ import { useParams, Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import { loadStripe } from "@stripe/stripe-js";
 import { toast } from "react-toastify";
 
 function Reservations() {
