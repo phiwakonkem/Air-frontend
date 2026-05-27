@@ -8,7 +8,6 @@ import Footer from "../components/Footer";
 const TABS = ["Create Listing", "My Listings", "Reservations"];
 
 function HostDashboard() {
-  const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState("Create Listing");
 
   const [form, setForm] = useState({
@@ -87,7 +86,6 @@ function HostDashboard() {
         await api.post("/api/accommodations", data);
         toast.success("Listing created!");
       }
-
       setForm({
         title: "",
         location: "",

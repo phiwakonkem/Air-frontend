@@ -7,10 +7,6 @@ import "react-datepicker/dist/react-datepicker.css";
 import { loadStripe } from "@stripe/stripe-js";
 import { toast } from "react-toastify";
 
-const stripePromise = loadStripe(
-  process.env.REACT_APP_STRIPE_KEY
-);
-
 function Reservations() {
   const { id } = useParams();
 
