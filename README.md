@@ -1,70 +1,81 @@
-# Getting Started with Create React App
+# Air Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The React front-end for an Airbnb-style accommodation booking platform — browse listings on an interactive map, book stays with date selection and Stripe checkout, manage a wishlist, and host your own listings through a dedicated dashboard.
+
+![React](https://img.shields.io/badge/React-19-61DAFB?style=flat-square&logo=react) ![React Router](https://img.shields.io/badge/React_Router-7-CA4245?style=flat-square&logo=reactrouter&logoColor=white) ![Stripe](https://img.shields.io/badge/Stripe-008CDD?style=flat-square&logo=stripe&logoColor=white) ![Leaflet](https://img.shields.io/badge/Leaflet-Maps-199900?style=flat-square&logo=leaflet&logoColor=white)
+
+## Features
+
+- **Listings** — browse accommodations with an interactive Leaflet map
+- **Booking flow** — date range picker (`react-datepicker`) and Stripe checkout
+- **Reservations** — view and manage "My Reservations"
+- **Wishlist** — save favorite listings
+- **Host dashboard** — manage your own listed properties
+- **Admin panel** — platform-level management
+- **Reviews** — leave and view listing reviews
+- **Auth** — login/register flow
+- **Charts** — booking/earnings visualizations via Recharts
+- **Toast notifications** and smooth transitions via Framer Motion
+
+## Tech Stack
+
+| Layer | Technology |
+|---|---|
+| Framework | React 19 (Create React App) |
+| Routing | React Router DOM 7 |
+| HTTP client | Axios |
+| Maps | React Leaflet |
+| Payments | Stripe.js |
+| Charts | Recharts |
+| Animation | Framer Motion |
+| Notifications | React Toastify |
+
+## ⚠️ Backend Required
+
+This is the frontend only — pair it with **[Air-Backend](https://github.com/phiwakonkem/Air-Backend)**, the matching Express/MongoDB API.
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js 20+
+- [Air-Backend](https://github.com/phiwakonkem/Air-Backend) running (see that repo's README)
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/phiwakonkem/Air-frontend.git
+cd Air-frontend
+```
+
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+### 3. Point the app at your backend
+
+Check `src/utils` or `src/context` for the Axios base URL / API constant and set it to wherever Air-Backend is running (e.g. `http://localhost:5000`).
+
+### 4. Run the development server
+
+```bash
+npm start
+```
+
+Visit [http://localhost:3000](http://localhost:3000).
 
 ## Available Scripts
 
-In the project directory, you can run:
+| Command | Description |
+|---|---|
+| `npm start` | Start the development server |
+| `npm run build` | Production build |
+| `npm test` | Run tests |
 
-### `npm start`
+## Author
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Phiwakonke Mthethwa**
+Full-Stack Developer, Centurion, South Africa
+GitHub: [@phiwakonkem](https://github.com/phiwakonkem) · LinkedIn: [phiwakonke-mthethwa](https://www.linkedin.com/in/phiwakonke-mthethwa-97aa74331) · Email: phiwakonkem@gmail.com
